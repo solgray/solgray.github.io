@@ -67,6 +67,18 @@
             letter-spacing: -.05em
         }
 
+        header h2 .icon {
+            display: inline-block;
+            margin-top: -.125em;
+            font-size: 2em;
+            vertical-align: middle;
+        }
+
+        header a {
+            color: inherit;
+            text-decoration: none;
+        }
+
         nav#globalnav {
             display: inline-block;
             float: right;
