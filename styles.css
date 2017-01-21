@@ -11,9 +11,9 @@
         /*Main CSS*/
 
         body {
-            width: 960px;
+            width: 90%;
             margin: 0 auto;
-            padding: 2em;
+            padding: 2em 2em 2em 1em;
             border-left: 1px solid #ccc;
             background-color: #eee;
             color: #333;
@@ -29,20 +29,20 @@
         h1 {
             padding-top: 1em;
             padding-bottom: 1em;
-            font-size: 2.4em;
+            font-size: 2.0em;
         }
 
         h2 {
             padding-top: .5em;
             padding-bottom: .25em;
-            font-size: 1.6em;
+            font-size: 1.4em;
         }
 
         header h1 {
             margin-bottom: 0;
             padding-bottom: 0;
             padding-top: 1em;
-            font-size: 4em;
+            font-size: 3em;
             color: #999;
             text-transform: lowercase;
             letter-spacing: -.1em;
@@ -61,7 +61,7 @@
             margin-top: .4em;
             padding-top: 0;
             padding-bottom: 2em;
-            font-size: 2em;
+            font-size: 1.5em;
             color: #e0e0e0;
             text-transform: lowercase;
             letter-spacing: -.05em
@@ -100,7 +100,7 @@
         }
 
         nav#globalnav li a {
-            padding: 1em 1.5em 1em 1.5em;
+            padding: .5em;
             color: #666;
             text-decoration: none;
         }
@@ -114,6 +114,15 @@
             padding-bottom: .75em;
         }
 
+        p a, #archive a {
+            color: #aaa;
+            text-decoration: underline;
+        }
+
+        p a:visited, #archive a {
+            color: #666;
+        }
+
         blockquote {
             margin: 0;
             padding: 1em 0em 1em 1em;
@@ -125,11 +134,10 @@
             color: #666;
         }
 
-        figure.float-right {
-            max-width: 33%;
-            float: right;
-            margin: 0;
-            padding: 0em 0em 1.5em 1.5em;
+        figure.float-right { /*override float for small screens*/
+            display: inline-block;
+            max-width: 93%;
+            margin: 1.5em 0em 1.5em 0em;
         }
 
         figure.float-right img {
@@ -160,3 +168,50 @@
             font-size: .8em;
             color: #ccc;
         }
+
+        /* Article page styles */
+
+        #archive li {
+            list-style: none;
+        }
+
+        /* Styles for screens wider than 1024px */
+
+        @media screen and (min-width: 1024px) {
+            body {
+                width: 960px;
+                padding: 2em;
+            }
+
+            h1 {
+                font-size: 2.4em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+
+            }
+
+            header h1 {
+                font-size: 4em;
+            }
+
+            header h2 {
+                font-size: 2em;
+            }
+
+            nav#globalnav li a {
+                padding: 1em 1.5em 1em 1.5em;
+            }
+
+            figure.float-right {
+                max-width: 33%;
+                float: right;
+                margin: 0;
+                padding: 0em 0em 1.5em 1.5em;
+            }
+        }
+
